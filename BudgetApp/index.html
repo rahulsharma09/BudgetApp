@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC1GV9Jm2u7rmsCe65wKzPTw5jtS38n2tVEGiMYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Kreon&family=Podkova:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js"></script>
+
+  </head>
+  <body>
+    <div class="title mt-4 ml-4">
+      <h2>Budget App</h2>
+    </div>
+
+    <div class="w3-center">
+        
+    </div>
+    <div class="alert alert-danger w3-animate-opacity ml-4" role="alert" id="error">
+
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-half">
+        <div class="card budget ml-4">
+            <div class="card-body">
+                <p>Enter your budget</p>
+                <input type="number" class="form-control" id="budget_amount"
+                    placeholder="Enter budget amount" />
+            </div>
+            <div class="w3-center">
+                <button class="btn btn-success btn-lg mb-2 cal-button" onclick="calBudget();">Calculate</button>
+            </div>
+        </div>
+      </div>
+      <div class="w3-half">
+       <div class="w3-row">
+          <div class="alert alert-warning w3-animate-opacity mr-2" role="alert" id="info">
+             
+          </div>
+           <div class="w3-quarter">
+                <h3>BUDGET</h3>
+                <img src="images/budget.png" alt="">
+                <div class="w3-row">
+                    <img class="w3-quarter" src="images/currency_inr_icon_137707.png" alt="">
+                    <span class="w3-quarter" id="budget_value_display">
+                    </span>
+                </div>
+               
+           </div>
+            <div class="w3-quarter">
+                <h3>EXPENSES</h3>
+                <img src="images/expense.png" alt="">
+                <div class="w3-row">
+                    <img class="w3-quarter" src="images/currency_inr_icon_137707.png" alt="">
+                    <span class="w3-quarter" id="expense_value_display">
+                    </span>
+                </div>
+            </div>
+            <div class="w3-quarter">
+                <h3>BALANCE</h3>
+                <img src="images/balance.png" alt="">
+                <div class="w3-row">
+                    <img class="w3-quarter" src="images/currency_inr_icon_137707.png" alt="">
+                    <span class="w3-quarter" id="balance_value_display">
+                    </span>
+                </div>
+            </div>
+       </div>
+      </div>
+    </div>
+    
+    
+<div class="w3-row">
+    <div class="w3-half">
+        <div class="card expense mt-5 ml-4">
+            <div class="card-body">
+                <p>Enter your expense name</p>
+                <input type="text" id="expenseName" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter expense title" />
+                <p class="mt-2">Enter your expense amount</p>
+                <input type="number" id="expenseAmount" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter expense amount" />
+            </div>
+    
+            <div class="w3-center">
+                <button class="btn btn-danger btn-lg expense_button mb-2" onclick="addExpense()">
+                    Add Expense
+                </button>
+            </div>
+    
+        </div>
+    </div>
+    <div class="w3-half mt-4 list" id="list">
+        <div class="w3-quarter list_font">
+            Expense Title
+            <div class="" id="list_title">
+                
+            </div>
+        </div>
+        <div class="w3-half list_font">
+            Expense Value
+            <div id="list_value">
+
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="ml-4 mt-3">
+        <button class="btn btn-primary btn-lg" onclick="clearAll()">Create new budget</button>
+    </div>
+        
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

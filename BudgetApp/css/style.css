@@ -1,0 +1,59 @@
+.title{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.budget{
+    width: 60%;
+    border: 2px solid green;
+    background-color: #f1f2f6;
+}
+
+.expense{
+     width: 60%;
+    border: 2px solid red;
+    background-color: #f1f2f6;
+}
+#error{
+    display: none;
+    width: 80%;
+}
+#info{
+    display: none;
+}
+p{
+    font-family: 'Fira Code', monospace;
+    font-size: 18px;
+}
+
+.expense_button{
+    background-color: red;
+    color: white;
+}
+
+
+#budget_value_display{
+    font-size: 23px;
+    color: blue;
+}
+
+#expense_value_display{
+    font-size: 23px;
+    color: red;
+}
+
+#balance_value_display{
+    font-size: 23px;
+    color:  rgb(3, 189, 3);
+}
+.list_font{
+    font-family: 'Podkova', serif;
+    font-size: 20px;
+}
+#list_title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:red;
+}
+#list_value{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:red;
+}
